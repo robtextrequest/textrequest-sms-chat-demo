@@ -6,9 +6,9 @@ Text Request's SMS Chat widget is an excellent way to generate inbound leads fro
 
 If you prefer to toggle the SMS Chat open and closed using your own custom button, you can do that. The steps to do so are:
 
-* Go to your SMS Chat settings within Text Request, and uncheck the boxes for "Show on Desktop" and "Show on Mobile". This will hide the SMS Chat button that floats in the lower right-hand corner. This step is optional. 
+1. Go to your SMS Chat settings within Text Request, and uncheck the boxes for "Show on Desktop" and "Show on Mobile". This will hide the SMS Chat button that floats in the lower right-hand corner. This step is optional. 
 
-* You'll need to place the following JavaScript snippet anywhere between your <head></head> tags.
+2. You'll need to place the following JavaScript snippet anywhere between your <head></head> tags.
 ```
 <script>
    var chatApi = {};
@@ -17,10 +17,12 @@ If you prefer to toggle the SMS Chat open and closed using your own custom butto
 </script>
 ```
 
-* Finally, add your Text Request SMS Chat JavaScript snippet just before the closing </body> tag. You can find this script on the SMS Chat settings page, located under the Integrations menu option in your Text Request account. 
+3. Add your Text Request SMS Chat JavaScript snippet just before the closing </body> tag. You can find this script on the SMS Chat settings page, located under the Integrations menu option in your Text Request account. 
 ```
 <txr-sms-chat api="{chatApi}" accountid="Your Text Request account ID" chatid="Your Text Request chat ID"></txr-sms-chat>
 <script type="text/javascript" src="https://fs.textrequest.com/sms-chat/main.bundle.js"></script>
 ```
+
+4. Add onclick="openWindow()" to a button or link to open the SMS Chat widget. Add onclick="closeWindow()" to a button or link to close the SMS Chat widget if it is open. 
 
 Take a look at the openAndCloseChat.html demo page to see an example implementation. 
