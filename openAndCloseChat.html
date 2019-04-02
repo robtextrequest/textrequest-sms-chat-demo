@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Text Request SMS Chat Demo</title>
+
+    <!-- The following script block must be included in your code. Place it anywhere in the <head></head> tags. -->
+    <script>
+        var chatApi = {};
+        openWindow = function () { chatApi.openChatWindow(); };
+        closeWindow = function () { chatApi.closeChatWindow(); };
+    </script>
+    <!-- End Text Request script include -->
+
+</head>
+<body>
+    <p>This page demonstrates opening and closing the Text Request SMS Chat widget using JavaScript.</p>
+
+    <p>
+        <!-- demonstration buttons to open and close the SMS Chat form. Add the onclick event handlers for openWindow()
+            and closeWindow() to the buttons on your page that you'd like to use for opening and closing the SMS Chat
+            window. -->
+        <button onclick="openWindow()">Open chat window</button>
+        <button onclick="closeWindow()">Close chat window</button>
+    </p>
+
+    <!-- The tag and script below are found in your SMS Chat settings page under the Integrations menu item. -->
+    <txr-sms-chat api="{chatApi}" accountid="2013" chatid="8a0a4cce-ee1a-44a6-99c7-f38918275254"></txr-sms-chat>
+    <script type="text/javascript" src="https://fs.textrequest.com/sms-chat/main.bundle.js"></script>
+    <!-- End Text Request SMS Chat include -->
+
+</body>
+</html>
